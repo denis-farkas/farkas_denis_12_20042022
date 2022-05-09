@@ -7,21 +7,21 @@ import { SessionProvider } from './context/SessionProvider';
 
 function App() {
   return (
-    <UserProvider>
-      <ActivityProvider>
-        <SessionProvider>
-          <PerformanceProvider>
-            <Router>
+    <Router>
+      <UserProvider>
+        <ActivityProvider>
+          <SessionProvider>
+            <PerformanceProvider>
               <div>
                 <Routes>
                   <Route path="/" element={<Home />} />
                 </Routes>
               </div>
-            </Router>
-          </PerformanceProvider>
-        </SessionProvider>
-      </ActivityProvider>
-    </UserProvider>
+            </PerformanceProvider>
+          </SessionProvider>
+        </ActivityProvider>
+      </UserProvider>
+    </Router>
   );
 }
 

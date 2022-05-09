@@ -3,6 +3,10 @@
   flex-wrap: wrap;
 }
 
+.row {
+  flex-wrap: nowrap;
+}
+
 .cel:not(:first-child) {
   margin-top: 2rem;
 }

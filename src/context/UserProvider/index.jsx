@@ -5,7 +5,6 @@ export const UserContext = createContext();
 
 const UserProvider = ({ children }) => {
   const [user, setUser] = useState();
-
   const getUser = async () => {
     try {
       const url = `http://localhost:3000/user/12`;
