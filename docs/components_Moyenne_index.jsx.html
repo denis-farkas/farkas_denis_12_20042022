@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: components/Moyenne/index.jsx</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: components/Moyenne/index.jsx</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import React from 'react';
+import { useContext } from 'react';
+import './moyenne.css';
+import {
+  LineChart,
+  Line,
+  XAxis,
+  ResponsiveContainer,
+  Tooltip,
+  Legend,
+} from 'recharts';
+import SessionContext from '../../context/SessionProvider';
+
+/**
+ * @description Time of each session in a week
+ * @returns (React.ReactElement)
+ */
+
+function Moyenne() {
+  const { sessionData } = useContext(SessionContext);
+
+  function CustomToolTip({ active, payload }) {
+    if (active) {
+      return (
+        &lt;div
+          style={{
+            padding: '3px 5px',
+            borderRadius: '2px',
+            background: '#FFF',
+            margin: 'auto',
+          }}
+        >
+          &lt;p style={{ fontSize: '10px' }}>{payload[0].value} min&lt;/p>
+        &lt;/div>
+      );
+    }
+    return null;
+  }
+
+  const renderLegend = () => {
+    return (
+      &lt;div
+        style={{
+          color: '#FFF',
+          padding: '0 5%',
+          opacity: '0.5',
+        }}
+      >
+        &lt;p style={{ fontSize: '.9rem', fontWeight: 'bolder' }}>
+          Durée moyenne des sessions
+        &lt;/p>
+      &lt;/div>
+    );
+  };
+
+  if (sessionData !== undefined) {
+    return (
+      &lt;div className="averageSessions">
+        &lt;ResponsiveContainer width="100%" height="100%">
+          &lt;LineChart
+            data={sessionData &amp;&amp; sessionData.data.sessions}
+            onMouseMove={(e) => {
+              if (e.isTooltipActive === true) {
+                let div = document.querySelector('.averageSessions');
+                let windowWidth = div.clientWidth;
+                let mouseXpercentage = Math.round(
+                  (e.activeCoordinate.x / windowWidth) * 100
+                );
+
+                div.style.background = `linear-gradient(90deg, rgba(255,0,0,1) ${mouseXpercentage}%, rgba(175,0,0,1.5) ${mouseXpercentage}%, rgba(175,0,0,1.5) 100%)`;
+              }
+            }}
+          >
+            &lt;defs>
+              &lt;linearGradient id="colorLine" x1="0%" y1="0" x2="100%" y2="0">
+                &lt;stop offset="0%" stopColor="#FFF" />
+                &lt;stop offset={`${0}%`} stopColor="red" />
+                &lt;stop offset={`${100}%`} stopColor="#FFF" />
+              &lt;/linearGradient>
+            &lt;/defs>
+            &lt;XAxis
+              dataKey="day"
+              axisLine={false}
+              tickLine={false}
+              height={30}
+              tick={{ fill: '#FFF', opacity: 0.5 }}
+              tickSize={12}
+              padding={{ left: 10, right: 10 }}
+              tickFormatter={(day) => {
+                const weekday = ['L', 'M', 'M', 'J', 'V', 'S', 'D'];
+                return `${weekday[day - 1]}`;
+              }}
+              allowDataOverflow={false}
+            />
+            &lt;Tooltip
+              content={
+                &lt;CustomToolTip
+                  active={true}
+                  payload={sessionData &amp;&amp; sessionData.data.sessions}
+                />
+              }
+              cursor={false}
+            />
+            &lt;Legend verticalAlign="top" align="left" content={renderLegend} />
+            &lt;Line
+              type="natural"
+              dataKey="sessionLength"
+              dot={false}
+              activeDot={{ fill: '#FFF' }}
+              strokeWidth={2}
+              stroke="url(#colorLine)"
+              overflow="hidden"
+            />
+          &lt;/LineChart>
+        &lt;/ResponsiveContainer>
+      &lt;/div>
+    );
+  }
+}
+export default Moyenne;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#AsideElements">AsideElements</a></li><li><a href="global.html#AsideLeft">AsideLeft</a></li><li><a href="global.html#Header">Header</a></li><li><a href="global.html#Histogramme">Histogramme</a></li><li><a href="global.html#Home">Home</a></li><li><a href="global.html#Moyenne">Moyenne</a></li><li><a href="global.html#Performance">Performance</a></li><li><a href="global.html#Profile">Profile</a></li><li><a href="global.html#Score">Score</a></li><li><a href="global.html#Simulate">Simulate</a></li><li><a href="global.html#useFetch">useFetch</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.10</a> on Mon May 30 2022 17:24:37 GMT+0200 (heure d’été d’Europe centrale)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
