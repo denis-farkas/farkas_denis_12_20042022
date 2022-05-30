@@ -1,8 +1,21 @@
-h1 {
-  font-size: 48px;
-  font-weight: 500;
+.header {
+  width: 1440px;
+  height: 91px;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: left;
 }
-.redTitle {
-  color: #ff0101;
-  padding-left: 15px;
+
+.small-img {
+  max-width: 178px;
+  height: auto;
+  margin-left: 23px;
+}
+
+.navLinks {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }

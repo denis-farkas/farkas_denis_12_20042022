@@ -1,26 +1,47 @@
-# Getting Started with React App
+[![forthebadge](https://forthebadge.com/images/badges/cc-0.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/uses-css.svg)](https://forthebadge.com)[![forthebadge](https://forthebadge.com/images/badges/uses-git.svg)](https://forthebadge.com)
 
-In the project directory, you can run:
+# SportSee: user profile page
 
-### `npm start`
+## 1. General information
 
-Runs the app in the development mode.\
-Open [http://localhost:3005](http://localhost:3005) to view it in your browser.
+Please follow the instructions below to start the project
 
-### `API`
+## 2. Project launch
 
-The API start on port 3000
+To start this project, first you need to install all the dependencies.  
+To do this, run the command `npm install` (with no args, in package dir)  
+This command installs any packages that it depends on.
 
-### `Endpoints`
+Then run the command `npm start`.
 
-This project includes four endpoints that you will be able to use:
+To create a production build, use `npm run build`.
 
-http://localhost:3000/user/${userId} - retrieves information from a user. This first endpoint includes the user id, user information (first name, last name and age), the current day's score (todayScore) and key data (calorie, macronutrient, etc.).
+## 3. API Rest usage
 
-http://localhost:3000/user/${userId}/activity - retrieves a user's activity day by day with kilograms and calories.
+You are free to use either mocks datas, or the API. Go to ".env.local" file, and switch value:  
+For data mocks: `REACT_APP_MOCK=true`  
+For data API: `REACT_APP_MOCK=false`
 
-http://localhost:3000/user/${userId}/average-sessions - retrieves the average sessions of a user per day. The week starts on Monday.
+## 3. Document source code with JSDoc
 
-http://localhost:3000/user/${userId}/performance - retrieves a user's performance (energy, endurance, etc.).
+Installation: [npm Jsdoc installation](https://www.npmjs.com/package/jsdoc)  
+Not necessary if you have already perform a global install.  
+Then, run the command `npm run doc`
 
-Warning, currently only two users have been mocked. They have userId 12 and 18 respectively.
+## Technologies
+
+- JS
+- sass
+- React
+
+## Contribute to the project
+
+No contribution needed for this project
+
+## Authors
+
+SportSee code squad : Gregory Dernaucourt
+
+## Licensing
+
+This project was built under SportSee licence.

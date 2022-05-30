@@ -1,0 +1,12 @@
+h1 {
+  font-size: 48px;
+  font-weight: 500;
+}
+.redTitle {
+  color: #ff0101;
+  padding-left: 15px;
+}
+
+.p_marge {
+  padding-top: 20px;
+}

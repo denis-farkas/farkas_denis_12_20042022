@@ -1,10 +1,16 @@
 import React from 'react';
-import useUser from '../../hooks/useUser';
+import { useContext } from 'react';
+import UserContext from '../../context/UserProvider';
 import numberWithCommas from '../../utility/Coma';
-import './aside.css';
+import './aside_elements.css';
 
-const Aside = () => {
-  const { user } = useUser();
+/**
+ *  Right aside cards for calories, proteins, carbohydrates, lipids
+ * @returns (React.ReactElement)
+ */
+
+function AsideElements() {
+  const { user } = useContext(UserContext);
   return (
     <div className="aside">
       <div className="cel col-lg-12">
@@ -117,6 +123,6 @@ const Aside = () => {
       </div>
     </div>
   );
-};
+}
 
-export default Aside;
+export default AsideElements;

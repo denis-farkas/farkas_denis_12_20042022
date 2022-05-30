@@ -1,21 +1,22 @@
-import React from 'react';
-import useUser from '../../hooks/useUser';
+import Navigation from '../Navigation';
 import './header.css';
 
-const Header = () => {
-  const { user } = useUser();
+/**
+ *  Header with logo and navigation component
+ * @returns (React.ReactElement)
+ */
 
+function Header() {
   return (
-    <div className="header">
-      <h1>
-        Bonjour
-        <span className="redTitle">
-          {user && user.data.userInfos.firstName}
-        </span>
-      </h1>
-      <p>Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
+    <div className="header col-lg-12">
+      <div className="logo col-lg-2">
+        <img className="small-img" src="images/logo.png" alt="logo" />
+      </div>
+      <div className="navLinks col-lg-10">
+        <Navigation />
+      </div>
     </div>
   );
-};
+}
 
 export default Header;
