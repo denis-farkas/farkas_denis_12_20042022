@@ -18,9 +18,19 @@ To create a production build, use `npm run build`.
 
 ## 3. API Rest usage
 
-You are free to use either mocks datas, or the API. Go to ".env.local" file, and switch value:  
-For data mocks: `REACT_APP_MOCK=true`  
-For data API: `REACT_APP_MOCK=false`
+First option: use mocked data
+
+Our application detect if the API server is not running and use directly mocked data in this case. It's not necessary to install the API.
+
+Other option: use the API Rest
+
+- Fork the repository API P9 Dashboard
+
+- Clone it on your computer.
+
+- The `yarn` command will allow you to install the dependencies.
+
+- The `yarn dev` command will allow you to run the micro API.
 
 ## 3. Document source code with JSDoc
 
@@ -30,9 +40,9 @@ Then, run the command `npm run doc`
 
 ## Technologies
 
-- JS
-- sass
-- React
+Jsx
+Bootstrap 5
+React
 
 ## Contribute to the project
 
@@ -40,7 +50,7 @@ No contribution needed for this project
 
 ## Authors
 
-SportSee code squad : Gregory Dernaucourt
+SportSee :denis farkas
 
 ## Licensing
 
