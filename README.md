@@ -25,6 +25,7 @@ Our application detect if the API server is not running and use directly mocked 
 Other option: use the API Rest
 
 - Fork the repository API P9 Dashboard
+  https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard
 
 - Clone it on your computer.
 
