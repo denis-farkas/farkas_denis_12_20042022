@@ -1,6 +1,5 @@
 .aside_left {
   background-color: black;
-
   max-height: 970px;
   width: 117px;
   display: flex;
@@ -10,23 +9,24 @@
 }
 
 .vide {
-  height: 258px;
+  height: 255px;
 }
 
 .elements {
   display: flex;
   flex-wrap: wrap;
-  height: 275px;
+  height: 230px;
   justify-content: center;
 }
 
 .copyright {
-  height: 340px;
+  height: 350px;
   color: #fff;
   font-size: 12px;
   writing-mode: vertical-lr;
   transform: rotate(180deg);
   margin-right: 45%;
+  margin-bottom: 70px;
 }
 
 .xsmall-img {
