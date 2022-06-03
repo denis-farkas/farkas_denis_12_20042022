@@ -17,7 +17,7 @@
 
 .cel {
   display: flex;
-  width: 258px;
+  max-width: 258px;
   background-color: #fbfbfb;
   align-items: center;
   justify-content: left;
@@ -65,10 +65,29 @@
 
 .avg p {
   font-size: 14px;
+  font-family: Roboto;
   font-weight: 500;
   margin-block-start: 0em;
   margin-block-end: 0em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   margin-top: 5px;
+}
+
+@media (max-width: 1240px) {
+  .cel {
+    max-width: 200px;
+  }
+
+  .rect-icon {
+    margin: 30px 1vw;
+  }
+
+  .avg h6 {
+    font-size: 20px;
+  }
+
+  .avg p {
+    font-size: 14px;
+  }
 }

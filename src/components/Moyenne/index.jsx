@@ -46,7 +46,14 @@ function Moyenne() {
           opacity: '0.5',
         }}
       >
-        <p style={{ fontSize: '.9rem', fontWeight: 'bolder' }}>
+        <p
+          style={{
+            fontSize: '.9rem',
+            fontWeight: 'bolder',
+            fontFamily: 'roboto',
+            marginTop: '.9rem',
+          }}
+        >
           Durée moyenne des sessions
         </p>
       </div>
@@ -56,7 +63,7 @@ function Moyenne() {
   if (sessionData !== undefined) {
     return (
       <div className="averageSessions">
-        <ResponsiveContainer width="100%" height="100%">
+        <ResponsiveContainer width="92%" height="92%">
           <LineChart
             data={sessionData && sessionData.data.sessions}
             onMouseMove={(e) => {
@@ -82,9 +89,10 @@ function Moyenne() {
               dataKey="day"
               axisLine={false}
               tickLine={false}
-              height={30}
+              tickMargin={20}
+              height={40}
               tick={{ fill: '#FFF', opacity: 0.5 }}
-              tickSize={12}
+              tickSize={8}
               padding={{ left: 10, right: 10 }}
               tickFormatter={(day) => {
                 const weekday = ['L', 'M', 'M', 'J', 'V', 'S', 'D'];

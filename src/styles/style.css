@@ -1,8 +1,18 @@
+:root {
+  --bs-body-font-family: Roboto !important;
+}
+
 body {
   background-color: rgb(255, 255, 255);
-  font-family: 'Roboto', sans-serif;
+  font-family: Roboto !important;
   color: #000000;
   max-width: 1240px;
+}
+
+h1,
+span,
+p {
+  font-family: Roboto !important;
 }
 
 .container {

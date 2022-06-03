@@ -2,7 +2,7 @@
 .nav-item {
   color: #fff;
   text-decoration: none;
-  margin-right: 106px;
+  margin-right: 5vw;
 }
 
 .navbar-dark {
@@ -12,5 +12,5 @@
 
 .navbar-nav {
   flex-direction: row;
-  margin-left: 99px;
+  margin-left: 5vw;
 }
