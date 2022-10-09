@@ -49,9 +49,10 @@ React
 
 No contribution needed for this project
 
-## Authors
+## Author
 
-SportSee :denis farkas
+- Website - [Portfolio](https://denis-farkas.students-laplateforme.io/)
+- Frontend Mentor - [@denis-farkas](https://www.frontendmentor.io/profile/denis-farkas)
 
 ## Licensing
 
